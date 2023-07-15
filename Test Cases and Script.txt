@@ -1,0 +1,75 @@
+
+
+Test case for UI:
+1)Verify that the page URL is correct.
+2.Verify that url reach to the desired careers application page.
+3)Verify Url Support to the all browsers like Crome, Firefox, Internet Explorer etc.                    
+4)Check that the company logo prominently on the page.
+5)Check all the Textbox's such as name, email, contact number are labeled properly and clearly visible.
+6)Verify that there are proper error messages displayed when required fields are left blank.
+7)Verify that there are proper error messagefilled with invalid data.
+8)Verify that the submit button is present and clearly labeled.
+9)Verify That that there are no overlapping elements, broken images, or missing content on the page.
+10)Verify that page is response to the different devices and screen sizes.
+11)Verify that there are no spelling or grammatical errors in the text content of the page.
+
+
+Test Cases for Functionality:
+
+1)Verify that all required fields are validated correctly. 
+2)Verify that error message is displayed if any field is left blank.
+3)Verify that email field validates the input for a valid email address format and displays an error if an invalid format is entered.
+4)Verify that the phone number field only accepts numeric input and displays an error if any other characters are entered.
+5)Verify that the file upload field allows the user to select a file from there device.
+6)Verify that form submission is successful when all required fields are filled with valid data.
+7)Verify that success message or confirmation is displayed after submition of form.
+8)Verify that the form allows the user to edit and modify their input before submitting.
+9)Verify that the form has a "Reset" or "Clear" button that clears all the entered data when clicked.
+10)Check if the form submission is not done when user enters invalid data and an error message is displayed or not.
+
+
+
+Script:
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CareersApplicationTests {
+    private WebDriver driver;
+
+    @Before
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+        driver = new ChromeDriver();
+    }
+
+    @After
+    public void tearDown() {
+        driver.quit();
+    }
+
+    @Test
+    public void testRequiredFieldsValidation() {
+        // Open the page URL
+        driver.get("https://www.hashtag-ca.com/careers/apply?jobCode=QAE001");    
+    }
+
+    @Test
+    public void testSuccessfulSubmission() {
+        // Open the page URL
+        driver.get("https://www.hashtag-ca.com/careers/apply?jobCode=QAE001");    
+    }
+
+    @Test
+    public void testInvalidDataSubmission() {
+        // Open the page URL
+        driver.get("https://www.hashtag-ca.com/careers/apply?jobCode=QAE001");    
+    }
+}
+
+
+
+
